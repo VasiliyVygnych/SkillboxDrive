@@ -1,0 +1,58 @@
+/* 
+  Localizable.strings
+  Skillbox Drive
+
+  Created by Vasiliy Vygnych on 16.07.2023.
+  
+*/
+//MARK: - Onboarding Screen
+"Now all your documents are in one place" = "Теперь все ваши документы в одном месте" ;
+"Access files without internet" = "Доступ к файлам без интернета" ;
+"Share your files with others" = "Делитесь вашими файлами с другими" ;
+"Next" = "Далее" ;
+//MARK: - Entrance Screen
+"Login" = "Войти" ;
+//MARK: - Authorization Screen
+"Login with Skillbox ID" = "Войдите с Skillbox ID" ;
+"Login or email" = "Логин или email" ;
+"Create ID" = "Cоздать ID" ;
+//MARK: - Registration Screen
+"Enter your phone number to create a Skillbox ID" = "Введите номер телефона для создания Skillbox ID" ;
+"back" = "назад" ;
+//MARK: - TabBar Items
+"Profile" = "Профиль" ;
+"Latest Files" = "Последние файлы" ;
+"All files" = "Все файлы" ;
+//MARK: - VerificationViewController
+"Enter the code from SMS. We sent it to a phone number" = "Введите код из смс. Мы отправили его на номер телефона" ;
+"We've sent you an email with a code" = "Отправили письмо с кодом Вам на почту" ;
+"confirmation code" = "код подтверждения" ;
+"send again" = "отправить повторно" ;
+//MARK: - DataFillingViewController
+"Enter your first and last name" = "Укажите имя и Фамилию" ;
+"First Name" = "Имя" ;
+"Last Name" = "Фамилия" ;
+//MARK: - ViewControllerProfile
+"Published files" = "Опубликованные файлы" ;
+//MARK: - ViewPublishedFilesNoFiles
+"You don't have any published files yet" = "У вас пока нет опубликованных файлов" ;
+"Update" = "Обновить" ;
+//MARK: - CellServise
+"Cancel" = "Отмена" ;
+"Remove a post" = "Убрать публикацию" ;
+"This file will be deleted" = "Этот файл будет удален" ;
+"Share" = "Поделиться" ;
+"link" = "Ссылкой" ;
+"File" = "Файлом" ;
+"Rename a file" = "Переименовать файл" ;
+"Enter a new file name" = "Введите новое название файла" ;
+"Rename" = "Переименовать" ;
+"New name" = "Новое название" ;
+//MARK: - Servise
+"Add a folder" = "Добавить папку" ;
+"Enter the folder name" = "Введите название папки" ;
+"Сreate" = "Создать" ;
+"Exit" = "Выйти" ;
+"Are you sure you want to log out?" = "Вы уверены, что хотите выйти?" ;
+"Yes" = "Да" ;
+"No" = "Нет" ;
