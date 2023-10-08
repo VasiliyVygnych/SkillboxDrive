@@ -10,8 +10,8 @@ import UIKit
 extension RouterLastFile where Self: Router {
     func openLastFile(with transition: Transition) {
         let router = DefaultRouter(rootTransition: transition)
-        let viewModelRouter = ViewModelLastFiles(router: router)
-        let viewController = ViewControllerLastFiles(viewModelRouter: viewModelRouter)
+        let viewModel = ViewModelLastFiles(router: router)
+        let viewController = ViewControllerLastFiles(viewModel: viewModel)
         let navigationController = UINavigationController(rootViewController: viewController)
         router.root = viewController
         route(to: navigationController,

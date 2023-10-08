@@ -30,8 +30,8 @@ extension ItemsTabBarRouter where Self: Router {
 //MARK: - makeLastFiles
     func makeLastFiles() -> UIViewController {
         let router = DefaultRouter(rootTransition: EmptyTransition())
-        let viewModelRouter = ViewModelLastFiles(router: router)
-        let viewController = ViewControllerLastFiles(viewModelRouter: viewModelRouter)
+        let viewModel = ViewModelLastFiles(router: router)
+        let viewController = ViewControllerLastFiles(viewModel: viewModel)
         router.root = viewController
         let navigation = UINavigationController(rootViewController: viewController)
         navigation.tabBarItem = UITabBarItem(title: nil,

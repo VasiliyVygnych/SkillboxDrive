@@ -30,10 +30,10 @@ class CellServise: UIViewController, CellServiseProtocol {
         cells.headerLabel.text = modelCell.name
         if let imageUrl = modelCell.preview,
             let url = URL(string: imageUrl) {
-            var request = URLRequest(url: url)
-            if let token = UserDefaults.standard.string(forKey: UserDefaultsKey.saveToken) {
-                request.setValue("OAuth \(token)",
-                                 forHTTPHeaderField: "Authorization")
+            let request = URLRequest(url: url)
+//            if let token = UserDefaults.standard.string(forKey: UserDefaultsKey.saveToken) {
+//                request.setValue("OAuth \(token)",
+//                                 forHTTPHeaderField: "Authorization")
                 URLSession.shared.dataTask(with: request) { data, _, _ in
                     if let data = data, let image = UIImage(data: data) {
                         DispatchQueue.main.async {
@@ -41,7 +41,7 @@ class CellServise: UIViewController, CellServiseProtocol {
                         }
                     }
                 }.resume()
-            }
+//            }
         } else {
             cells.imagePreview.image = UIImage(named: "Group")
             guard let created = modelCell.created else { return }
@@ -67,10 +67,10 @@ class CellServise: UIViewController, CellServiseProtocol {
         cells.infoLabel.text = "\(size/1024) kb, \(String(describing: srt))"
         if let imageUrl = modelCell.preview,
             let url = URL(string: imageUrl) {
-            var request = URLRequest(url: url)
-            if let token = UserDefaults.standard.string(forKey: UserDefaultsKey.saveToken) {
-                request.setValue("OAuth \(token)",
-                                    forHTTPHeaderField: "Authorization")
+            let request = URLRequest(url: url)
+//            if let token = UserDefaults.standard.string(forKey: UserDefaultsKey.saveToken) {
+//                request.setValue("OAuth \(token)",
+//                                    forHTTPHeaderField: "Authorization")
                 URLSession.shared.dataTask(with: request) { data, _, _ in
                     if let data = data, let image = UIImage(data: data) {
                         DispatchQueue.main.async {
@@ -78,7 +78,7 @@ class CellServise: UIViewController, CellServiseProtocol {
                         }
                     }
                 }.resume()
-            }
+//            }
         }
     }
 // MARK: - clickCell

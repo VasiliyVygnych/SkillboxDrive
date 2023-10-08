@@ -14,12 +14,9 @@ protocol RouterLastFile {
 protocol RouterlLastFilesProtocol: AnyObject {
     func dismiss()
     func nextScreen()
-}
-
-protocol ViewModelLastFilesProtocol: AnyObject {
+    
     var dataCell: Box<AllFilesDisk?> { get set }
-    var numberOfSection: Int { get }
-    var numberOfRowSection: (_ section: Int) -> Int { get }
+    func viewWillAppear()
 }
 
 

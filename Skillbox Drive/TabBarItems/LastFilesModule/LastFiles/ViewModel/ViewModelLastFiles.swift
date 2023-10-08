@@ -9,6 +9,10 @@ import Foundation
 
 // MARK: - class ViewModelLastFiles
 final class ViewModelLastFiles: RouterlLastFilesProtocol {
+    
+    private let netWork: NetWorkProtocol = NetWork()
+    var dataCell: Box<AllFilesDisk?> = Box(nil)
+    
     typealias Routes = InputRouter & Closable
     private var router: Routes
     init(router: Routes) {
@@ -20,15 +24,15 @@ final class ViewModelLastFiles: RouterlLastFilesProtocol {
     func nextScreen() { //переход на следующий экран
 //        router.
     }
-}
-// MARK: - class ViewModelAllFilesModel
-final class LastFilesModel: ViewModelLastFilesProtocol {
-    var dataCell: Box<AllFilesDisk?> = Box(nil)
-    var numberOfSection: Int {
-        return 1
+    
+    
+    func viewWillAppear() {
+        netWork.downloadingAllFiles { [ weak self ] data in
+            DispatchQueue.main.async {
+                self?.dataCell.value = data
+            }
+        }
     }
-    lazy var numberOfRowSection: (Int) -> Int = getNumberOfRowSection
-    private func getNumberOfRowSection(_ section: Int) -> Int {
-        return dataCell.value??.embedded.items.count ?? 0
-    }
+    
+   
 }

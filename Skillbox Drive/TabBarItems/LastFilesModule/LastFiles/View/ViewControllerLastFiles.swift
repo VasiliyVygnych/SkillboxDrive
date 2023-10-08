@@ -15,18 +15,22 @@ final class ViewControllerLastFiles: UITableViewController {
 // MARK: - Properties
     private var cellRecentFiles = "cellRecentFiles"
     private let loader = UIActivityIndicatorView()
-    private var viewModel: ViewModelLastFilesProtocol = LastFilesModel()
+    private let viewModel: ViewModelLastFiles
     
-    private let servis: ServiseProtocol = Servise()
+    
+    
     private let cellServis: CellServiseProtocol = CellServise()
-    private let netWork: NetWorkProtocol = NetWork()
-    private let viewModelRouter: ViewModelLastFiles
     
     
+    var model: [Item]? {
+        didSet {
+            tableView.reloadData()
+        }
+    }
     
 // MARK: - init
-init(viewModelRouter: ViewModelLastFiles) {
-    self.viewModelRouter = viewModelRouter
+init(viewModel: ViewModelLastFiles) {
+    self.viewModel = viewModel
         super.init(nibName: nil,
                     bundle: nil)
     }
@@ -38,30 +42,16 @@ init(viewModelRouter: ViewModelLastFiles) {
         super.viewDidLoad()
         view.backgroundColor = .white
         navigationItem.title  = "Последние файлы".localized()
+        viewModel.dataCell.bind { data in
+            self.loader.startAnimating()
+            self.model = data??.embedded.items
+        }
         setupeTable()
         initialLoading()
-        initialisation()
     }
-    
-    
-    
-    
-    
-// MARK: - initialisation
-    private func initialisation() {
-        netWork.downloadingAllFiles(completion: { dataFiles in
-            DispatchQueue.main.async {
-                self.loader.startAnimating()
-                guard let model = dataFiles else { return }
-                self.viewModel.dataCell.value = model
-                self.tableView.reloadData()
-            }
-        })
+    override func viewWillAppear(_ animated: Bool) {
+        viewModel.viewWillAppear()
     }
-    
-    
-    
-    
 // MARK: - setupeTableView
     private func setupeTable() {
         tableView.backgroundColor = .white
@@ -69,27 +59,25 @@ init(viewModelRouter: ViewModelLastFiles) {
         tableView.rowHeight = 60
         tableView.register(Cells.self,
                            forCellReuseIdentifier: cellRecentFiles)
-        tableView.dataSource = self
-        tableView.delegate = self
     }
 // MARK: - initialLoading
     private func initialLoading() {
         view.addSubview(loader)
-        loader.snp.makeConstraints {
-            $0.centerX.equalToSuperview()
-            $0.centerY.equalToSuperview()
+        loader.snp.makeConstraints { make in
+            make.top.equalTo(200)
+            make.centerX.equalToSuperview()
         }
     }
 // MARK: - override func tableView
     override func tableView(_ tableView: UITableView,
                    numberOfRowsInSection section: Int) -> Int {
-        viewModel.numberOfRowSection(section)
+        model?.count ?? 0
     }
     override func tableView(_ tableView: UITableView,
                    cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellRecentFiles,
                                                        for: indexPath) as? Cells,
-              let viewModel = viewModel.dataCell.value??.embedded.items[indexPath.row] else {
+              let viewModel = model?[indexPath.row] else {
         return UITableViewCell()
         }
         loader.stopAnimating()
@@ -97,10 +85,16 @@ init(viewModelRouter: ViewModelLastFiles) {
         cellServis.сonfiguresFiles(cells: cell,
                                          modelCell: viewModel)
         return cell
-    }  
+    }
+    
+    
+    
+    
+    
 // MARK: - screen description
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let viewModel = viewModel.dataCell.value??.embedded.items[indexPath.row] else { return }
+    override func tableView(_ tableView: UITableView,
+                            didSelectRowAt indexPath: IndexPath) {
+        guard let viewModel = model?[indexPath.row] else { return }
         let descriptionVC = DescriptionLastFiles()
         descriptionVC.сonfiguresDescriptionView(modelCell: viewModel)
         descriptionVC.setupeButton(index: indexPath.row)

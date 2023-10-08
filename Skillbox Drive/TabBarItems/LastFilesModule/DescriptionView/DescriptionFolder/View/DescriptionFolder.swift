@@ -14,14 +14,18 @@ class DescriptionFolder: UIViewController {
     private let loader = UIActivityIndicatorView()
     private let viewModel: VMForFolderDescriptionProtocol = VMForFolderDescription()
     
-    private let netWork: NetWorkProtocol = NetWork()
+
     private let cellServis: CellServiseProtocol = CellServise()
     
     
     private var nameCell = "name"
     
     
-    
+    var model: [Item]? {
+        didSet {
+            tableView.reloadData()
+        }
+    }
     
     private let appearance = UINavigationBarAppearance()
     private let gestureRecognizer = UITapGestureRecognizer()
@@ -87,14 +91,17 @@ class DescriptionFolder: UIViewController {
         view.addSubview(imagePreview)
         view.addSubview(deleteButton)
         view.addSubview(shareButton)
-        viewModel.updateView = { [ weak self ] in
-            self?.tableView.reloadData()
+        viewModel.dataCell.bind { data in
+            self.loader.startAnimating()
+            self.model = data??.embedded.items
         }
-//        view.addGestureRecognizer(gestureRecognizer)
+        setupeTable()
         setupeConstraints()
-        appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
-        navigationItem.standardAppearance = appearance
     }
+    
+    
+    
+    
     
     
     
@@ -103,32 +110,27 @@ class DescriptionFolder: UIViewController {
     func сonfiguresDescriptionFolder(modelCell: Item) {
         viewModel.сonfiguresDescriptionFolder(cell: self,
                                             modelCell: modelCell)
+        viewModel.viewWillAppear(name: modelCell.path)
+    
         guard let header = modelCell.name else { return }
         navigationItem.title = header
         nameCell = header
-        netWork.showFolder(name: modelCell.path) { dataFiles in
-            DispatchQueue.main.async {
-                self.loader.startAnimating()
-                self.appearance.titleTextAttributes = [.foregroundColor: UIColor.black]
-                self.navigationItem.standardAppearance = self.appearance
-                self.settingButton.tintColor = .black
-                self.backButton.tintColor = .black
-                self.setupeTable()
-                guard let model = dataFiles else { return }
-                self.viewModel.dataCell.value = model
-                self.setupeTable()
-                self.tableView.reloadData()
-            }
-        }
-        loader.stopAnimating()
     }
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
 // MARK: - setupeTableView
     private func setupeTable() {
         view.addSubview(tableView)
-        tableView.backgroundColor = .white
+        tableView.backgroundColor = .gray
         tableView.register(Cells.self,
                             forCellReuseIdentifier: cell)
         tableView.dataSource = self
@@ -240,13 +242,14 @@ extension DescriptionFolder: UITableViewDelegate,
                     UITableViewDataSource {
     func tableView(_ tableView: UITableView,
                    numberOfRowsInSection section: Int) -> Int {
-        viewModel.numberOfRowSection(section)
+//        viewModel.numberOfRowSection(section)
+        model?.count ?? 0
     }
     func tableView(_ tableView: UITableView,
                    cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cell,
                                                        for: indexPath) as? Cells,
-              let viewModel = viewModel.dataCell.value??.embedded.items[indexPath.row] else {
+              let viewModel = model?[indexPath.row] else {
         return UITableViewCell()
         }
         loader.stopAnimating()
@@ -255,9 +258,23 @@ extension DescriptionFolder: UITableViewDelegate,
                                          modelCell: viewModel)
         return cell
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 // MARK: - screen description
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let model = viewModel.dataCell.value??.embedded.items[indexPath.row] else { return }
+        guard let model = model?[indexPath.row] else { return }
         let decsriptionView = DescriptionLastFiles()
         decsriptionView.сonfiguresDescriptionView(modelCell: model)
         decsriptionView.setupeButton(index: indexPath.row)

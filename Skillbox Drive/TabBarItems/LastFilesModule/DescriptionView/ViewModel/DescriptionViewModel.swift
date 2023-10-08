@@ -16,8 +16,26 @@ final class DescriptionViewModel: UIViewController, DescriptionViewProtocol {
     private let servis: ServiseProtocol = Servise()
     private let netWork: NetWorkProtocol = NetWork()
     var dataCell: Box<AllFilesDisk?> = Box(nil)
-    var updateView: (() -> Void)?
 // MARK: - сonfiguresDescriptionView
+    
+    
+    func viewWillAppear(name: String) {
+        netWork.showFolder(name: name, completion: { [ weak self ] data in
+            DispatchQueue.main.async {
+                self?.dataCell.value = data
+            
+            }
+        })
+    
+    }
+    
+    func test() {
+        
+    }
+    
+    
+    
+    
     func сonfiguresDescriptionView(cell: DescriptionLastFiles,
                                    modelCell: Item) {
         guard let size = modelCell.size else { return }
@@ -27,10 +45,7 @@ final class DescriptionViewModel: UIViewController, DescriptionViewProtocol {
         cell.descriptionLabels.text = "\(size/1024) kb, \(String(describing: string))"
         if let imageUrl = modelCell.preview,
             let url = URL(string: imageUrl) {
-            var request = URLRequest(url: url)
-            if let token = UserDefaults.standard.string(forKey: UserDefaultsKey.saveToken) {
-                request.setValue("OAuth \(token)",
-                                 forHTTPHeaderField: "Authorization")
+            let request = URLRequest(url: url)
                 URLSession.shared.dataTask(with: request) { data, _, _ in
                     if let data = data, let image = UIImage(data: data) {
                         DispatchQueue.main.async {
@@ -38,9 +53,14 @@ final class DescriptionViewModel: UIViewController, DescriptionViewProtocol {
                         }
                     }
                 }.resume()
-            }
         }
     }
+    
+    
+    
+    
+    
+    
 // MARK: - cells mhetods
     var numberOfSection: Int {
         return 1

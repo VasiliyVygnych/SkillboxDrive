@@ -16,7 +16,7 @@ final class ViewControllerProfile: UIViewController, ChartViewDelegate {
     
     var model: ProfileFiles? {
         didSet {
-//            print("modellll: \(String(describing: model))")
+            loader.stopAnimating()
         }
     }
        
@@ -70,6 +70,7 @@ final class ViewControllerProfile: UIViewController, ChartViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.dataCell.bind { data in
+            self.loader.startAnimating()
             self.model = data
         }
         initialView()
@@ -126,7 +127,6 @@ final class ViewControllerProfile: UIViewController, ChartViewDelegate {
         view.addSubview(headerProfileLabel)
         view.addSubview(buttonNextScreen)
         view.addSubview(pieView)
-        
         pieView.delegate = self
     }
 // MARK: - nextScreen
@@ -142,13 +142,14 @@ final class ViewControllerProfile: UIViewController, ChartViewDelegate {
 // MARK: - initialLoading
     private func initialLoading() {
         view.addSubview(loader)
-        loader.snp.makeConstraints {
-            $0.centerX.equalToSuperview()
-            $0.centerY.equalToSuperview()
+        loader.snp.makeConstraints { make in
+            make.top.equalTo(200)
+            make.centerX.equalToSuperview()
         }
     }
 // MARK: - setupePieView
     func setupePieView() {
+        
         var entries = [PieChartDataEntry]()
                 
         entries.append(PieChartDataEntry(value: viewModel.occupiedSpace,

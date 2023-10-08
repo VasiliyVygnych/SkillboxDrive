@@ -675,8 +675,8 @@
 		99AE6AC22A645D7500063D52 /* LastFilesModule */ = {
 			isa = PBXGroup;
 			children = (
-				45EDFBE62A73CA1200DD85A5 /* DescriptionView */,
 				45EDFBE92A73D1C500DD85A5 /* LastFiles */,
+				45EDFBE62A73CA1200DD85A5 /* DescriptionView */,
 			);
 			path = LastFilesModule;
 			sourceTree = "<group>";

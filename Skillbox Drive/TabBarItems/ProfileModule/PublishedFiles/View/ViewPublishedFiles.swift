@@ -14,6 +14,8 @@ final class ViewPublishedFiles: UITableViewController {
     private let loader = UIActivityIndicatorView()
     private let cellServis: CellServiseProtocol = CellServise()
     private let viewModel: PublishedFiles
+    
+    
     private var nameCell = "name"
     
 
@@ -40,10 +42,13 @@ final class ViewPublishedFiles: UITableViewController {
         setupeTable()
         initialLoading()
         viewModel.dataCell.bind { data in
+            self.loader.startAnimating()
             self.model = data??.items
         }
-        viewModel.viewWillAppear()
         setupeBarButtonItem()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        viewModel.viewWillAppear()
     }
     private func setupeBarButtonItem() {
         let backButton: UIBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "chevron.backward"),
@@ -68,9 +73,9 @@ final class ViewPublishedFiles: UITableViewController {
 // MARK: - initialLoading
     private func initialLoading() {
         view.addSubview(loader)
-        loader.snp.makeConstraints {
-            $0.centerX.equalToSuperview()
-            $0.centerY.equalToSuperview()
+        loader.snp.makeConstraints { make in
+            make.top.equalTo(200)
+            make.centerX.equalToSuperview()
         }
     }
     override func tableView(_ tableView: UITableView,

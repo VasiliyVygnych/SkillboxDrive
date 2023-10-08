@@ -47,11 +47,14 @@ final class ViewControllerAllFiles: UITableViewController {
         view.backgroundColor = .white
         navigationItem.title  = "Все файлы".localized()
         viewModel.dataCell.bind { data in
+            self.loader.startAnimating()
             self.model = data??.embedded.items
         }
         setupeTable()
         initialLoading()
         setupeButton()
+    }
+    override func viewWillAppear(_ animated: Bool) {
         viewModel.viewWillAppear()
     }
 // MARK: - setupeButton
@@ -68,6 +71,14 @@ final class ViewControllerAllFiles: UITableViewController {
         let alert = servis.addingFolder(sender: sender)
         navigationController?.present(alert,
                                       animated: true)
+        
+        
+        
+        
+        
+        
+        
+        
 //        tableView.reloadData()
     }
 // MARK: - setupeTable
@@ -81,9 +92,9 @@ final class ViewControllerAllFiles: UITableViewController {
 // MARK: - initialLoading
     private func initialLoading() {
         view.addSubview(loader)
-        loader.snp.makeConstraints {
-            $0.centerX.equalToSuperview()
-            $0.centerY.equalToSuperview()
+        loader.snp.makeConstraints { make in
+            make.top.equalTo(200)
+            make.centerX.equalToSuperview()
         }
     }
 // MARK: - override func tableView

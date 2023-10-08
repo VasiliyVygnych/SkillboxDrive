@@ -35,12 +35,21 @@ class DescriptionLastFiles: UIViewController {
     var totalPageCount = 0
     
     
+    
+    
+    
+    var model: [Item]? {
+        didSet {
+            tableView.reloadData()
+        }
+    }
+    
+    
 // MARK: - tableView
     private var tableView: UITableView = {
-        let tableView = UITableView(frame: .zero,
-                                    style: .grouped)
-            tableView.translatesAutoresizingMaskIntoConstraints = false
-            tableView.rowHeight = 80
+    let tableView = UITableView()
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.rowHeight = 80
         return tableView
         }()
 // MARK: - labels & image & Button
@@ -96,38 +105,62 @@ class DescriptionLastFiles: UIViewController {
         view.addSubview(imagePreview)
         view.addSubview(deleteButton)
         view.addSubview(shareButton)
-        viewModel.updateView = { [ weak self ] in
-            self?.tableView.reloadData()
+        viewModel.dataCell.bind { data in
+            self.loader.startAnimating()
+            self.model = data??.embedded.items
         }
-//        view.addGestureRecognizer(gestureRecognizer)
+        setupeTable()
+        setupeView()
         setupeConstraints()
-        appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
-        navigationItem.standardAppearance = appearance
+        
     }
+    private func setupeView() {
+        appearance.titleTextAttributes = [.foregroundColor: UIColor.black]
+        navigationItem.standardAppearance = self.appearance
+        settingButton.tintColor = .black
+        backButton.tintColor = .black
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 // MARK: - сonfiguresDescriptionView
     func сonfiguresDescriptionView(modelCell: Item) {
         viewModel.сonfiguresDescriptionView(cell: self,
                                             modelCell: modelCell)
+        
+        viewModel.viewWillAppear(name: modelCell.path)
+        
         guard let header = modelCell.name else { return }
         navigationItem.title = header
         nameCell = header
-        netWork.showFolder(name: modelCell.path) { dataFiles in
-            DispatchQueue.main.async {
-                self.loader.startAnimating()
-                self.appearance.titleTextAttributes = [.foregroundColor: UIColor.black]
-                self.navigationItem.standardAppearance = self.appearance
-                self.settingButton.tintColor = .black
-                self.backButton.tintColor = .black
-                self.setupeTable()
-                guard let model = dataFiles else { return }
-                self.viewModel.dataCell.value = model
-                self.setupeTable()
-//                self.openPDFFiles()
-                self.tableView.reloadData()
-            }
-        }
-        loader.stopAnimating()
+//        self.openPDFFiles()
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
 // MARK: - openPDFFiles
     func openPDFFiles() {
@@ -170,7 +203,7 @@ class DescriptionLastFiles: UIViewController {
 // MARK: - setupeTableView
     private func setupeTable() {
         view.addSubview(tableView)
-        tableView.backgroundColor = .white
+        tableView.backgroundColor = .red
         tableView.register(Cells.self,
                             forCellReuseIdentifier: cell)
         tableView.dataSource = self
@@ -233,6 +266,9 @@ class DescriptionLastFiles: UIViewController {
         navigationController?.present(alert,
                                       animated: true)
     }
+    
+    
+    
 // MARK: - didTap
     @objc func didTap(_ gesture: UITapGestureRecognizer) {
         let tapLocation = gesture.location(in: imagePreview.superview)
@@ -246,6 +282,12 @@ class DescriptionLastFiles: UIViewController {
             }
         }
     }
+    
+    
+    
+    
+    
+    
 // MARK: - initialLoading
     private func initialLoading() {
         view.addSubview(loader)
@@ -283,13 +325,14 @@ extension DescriptionLastFiles: UITableViewDelegate,
                     UITableViewDataSource {
     func tableView(_ tableView: UITableView,
                    numberOfRowsInSection section: Int) -> Int {
-        viewModel.numberOfRowSection(section)
+//        viewModel.numberOfRowSection(section)
+        model?.count ?? 0
     }
     func tableView(_ tableView: UITableView,
                    cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cell,
                                                        for: indexPath) as? Cells,
-              let viewModel = viewModel.dataCell.value??.embedded.items[indexPath.row] else {
+              let viewModel = model?[indexPath.row] else {
         return UITableViewCell()
         }
         loader.stopAnimating()
@@ -297,10 +340,21 @@ extension DescriptionLastFiles: UITableViewDelegate,
         cellServis.сonfiguresFiles(cells: cell,
                                          modelCell: viewModel)
         return cell
-    } 
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 // MARK: - screen description
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let model = viewModel.dataCell.value??.embedded.items[indexPath.row] else { return }
+        guard let model = model?[indexPath.row] else { return }
         let decsriptionView = DescriptionFolder()
         decsriptionView.сonfiguresDescriptionFolder(modelCell: model)
         decsriptionView.setupeButton(index: indexPath.row)
