@@ -77,6 +77,11 @@ final class Servise: UIViewController, ServiseProtocol {
         return alert
     } 
 }
+
+
+
+
+
 // MARK: - extension ViewControllerProfile
 extension ViewControllerProfile {
     func exitProfile(sender: UIButton) {
@@ -105,10 +110,9 @@ extension ViewControllerProfile {
                                           style: .cancel)
         let action = UIAlertAction(title: "Да".localized(),
                                     style: .destructive) { (action) in
-             self.netWork.exitProfile()
              Keys.loginKey = false
              self.servis.checkingLoginKey()
-             self.viewModelRouter.exit()
+             self.viewModel.exit()
       }
          alert.addAction(cancelAction)
          alert.addAction(action)

@@ -79,6 +79,9 @@ final class NetWork: NetWorkProtocol {
             task.resume()
         }
     }
+    
+    
+    
 //MARK: - showInfoProfile
     func showInfoProfile(completion: @escaping (ProfileFiles?) -> Void) {
         if let token = UserDefaults.standard.string(forKey: UserDefaultsKey.saveToken) {
@@ -95,11 +98,17 @@ final class NetWork: NetWorkProtocol {
                         JSONDecoder().decode(ProfileFiles.self,
                                              from: data) else { return }
                 let model = newFiles
+//                print("model: \(model)")
                 completion(model)
             }
             task.resume()
         }
     }
+    
+    
+    
+    
+    
 //MARK: - showPublishedFiles
     func showPublishedFiles(completion: @escaping (RecentFiles?) -> Void) {
         if let token = UserDefaults.standard.string(forKey: UserDefaultsKey.saveToken) {
@@ -151,14 +160,14 @@ final class NetWork: NetWorkProtocol {
             components?.queryItems = [URLQueryItem(name: "path",
                                                    value: "\(name)"),
                                       URLQueryItem(name: "fields",
-                                                   value: "name,_embedded.items.path")
-            ]
+                                                   value: "name,_embedded.items.path")]
           guard let url = components?.url else { return }
             var request = URLRequest(url: url)
             request.httpMethod = "PUT"
             request.setValue("OAuth \(token)",
                              forHTTPHeaderField: "Authorization")
-            let task = URLSession.shared.dataTask(with: request) { [ weak self ] (data, response, error) in
+            let task = URLSession.shared.dataTask(with: request) {
+                (data, response, error) in
                 if let response = response as? HTTPURLResponse {
                     print("Status: \(response.statusCode)")
                 }
@@ -173,14 +182,14 @@ final class NetWork: NetWorkProtocol {
             components?.queryItems = [URLQueryItem(name: "path",
                                                    value: "\(name)"),
                                       URLQueryItem(name: "permanently",
-                                                   value: "false")
-            ]
+                                                   value: "false")]
           guard let url = components?.url else { return }
             var request = URLRequest(url: url)
-            request.httpMethod = "PUT"
+            request.httpMethod = "DELETE"
             request.setValue("OAuth \(token)",
                              forHTTPHeaderField: "Authorization")
-            let task = URLSession.shared.dataTask(with: request) { [ weak self ] (data, response, error) in
+            let task = URLSession.shared.dataTask(with: request) { 
+                (data, response, error) in
                 if let response = response as? HTTPURLResponse {
                     print("Status: \(response.statusCode)")
                 }
@@ -202,7 +211,26 @@ final class NetWork: NetWorkProtocol {
     }
 //MARK: - renameFile
     func renameFile(rename: String, name: String) {
-        
+//        if let token = UserDefaults.standard.string(forKey: UserDefaultsKey.saveToken) {
+//            var components = URLComponents(string: "https://cloud-api.yandex.net/v1/disk/resources/")
+//            components?.queryItems = [URLQueryItem(name: "path",
+//                                                   value: "\(name)"),
+//                                      URLQueryItem(name: "fields",
+//                                                   value: "name,_embedded.items.path")]
+//          guard let url = components?.url else { return }
+//            var request = URLRequest(url: url)
+//            request.httpMethod = "PATCH"
+//            request.setValue("OAuth \(token)",
+//                             forHTTPHeaderField: "Authorization")
+//            let task = URLSession.shared.dataTask(with: request) { [ weak self ]
+//                (data, response, error) in
+//                if let response = response as? HTTPURLResponse {
+//                    print("Status: \(response.statusCode)")
+//                }
+//            }
+//            task.resume()
+//        }
+
         print("переименовать \(name) в \(rename)")
     }
 //MARK: - exitProfile

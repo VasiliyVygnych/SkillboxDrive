@@ -17,6 +17,15 @@
 		458394F52A65BFD4008D2A66 /* ViewModelPublishedFiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458394F42A65BFD4008D2A66 /* ViewModelPublishedFiles.swift */; };
 		458394F72A65BFDE008D2A66 /* ViewPublishedFiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458394F62A65BFDE008D2A66 /* ViewPublishedFiles.swift */; };
 		458394F92A65BFEB008D2A66 /* RouterPublishedFiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458394F82A65BFEB008D2A66 /* RouterPublishedFiles.swift */; };
+		458B4BA52AD1F27900F9F8B4 /* OnboardingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458B4BA42AD1F27900F9F8B4 /* OnboardingProtocol.swift */; };
+		458B4BAB2AD1F52900F9F8B4 /* AuthorizateProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458B4BAA2AD1F52900F9F8B4 /* AuthorizateProtocols.swift */; };
+		458B4BB52AD2028D00F9F8B4 /* ProfileModuleProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458B4BB42AD2028D00F9F8B4 /* ProfileModuleProtocols.swift */; };
+		458B4BBB2AD208DC00F9F8B4 /* LastFilesProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458B4BBA2AD208DC00F9F8B4 /* LastFilesProtocols.swift */; };
+		458B4BC02AD209AB00F9F8B4 /* DescriptionLastFilesProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458B4BBF2AD209AB00F9F8B4 /* DescriptionLastFilesProtocols.swift */; };
+		458B4BC52AD20E7700F9F8B4 /* AllFilesProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458B4BC42AD20E7700F9F8B4 /* AllFilesProtocols.swift */; };
+		458B4BCB2AD218A500F9F8B4 /* PublishedFilesProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458B4BCA2AD218A500F9F8B4 /* PublishedFilesProtocol.swift */; };
+		458B4BCD2AD219CE00F9F8B4 /* NoFilesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458B4BCC2AD219CE00F9F8B4 /* NoFilesView.swift */; };
+		458B4BD32AD2C03E00F9F8B4 /* RecentFilesProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458B4BD22AD2C03E00F9F8B4 /* RecentFilesProtocols.swift */; };
 		45E753DD2A86646100AFC00C /* DescriptionFolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E753DC2A86646100AFC00C /* DescriptionFolder.swift */; };
 		45E753DF2A866C2000AFC00C /* VMForFolderDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E753DE2A866C2000AFC00C /* VMForFolderDescription.swift */; };
 		45EDFBE52A73C62A00DD85A5 /* DescriptionLastFiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45EDFBE42A73C62A00DD85A5 /* DescriptionLastFiles.swift */; };
@@ -35,17 +44,17 @@
 		99AE6AD42A645E1C00063D52 /* ViewControllerAllFiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AE6AD32A645E1C00063D52 /* ViewControllerAllFiles.swift */; };
 		99AE6AD62A645E2700063D52 /* RouterAllFiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AE6AD52A645E2700063D52 /* RouterAllFiles.swift */; };
 		99AE6AD82A645E3400063D52 /* Cells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AE6AD72A645E3400063D52 /* Cells.swift */; };
-		99AE6ADA2A645E4200063D52 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AE6AD92A645E4200063D52 /* Models.swift */; };
+		99AE6ADA2A645E4200063D52 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AE6AD92A645E4200063D52 /* Model.swift */; };
 		99AE6ADC2A645E6F00063D52 /* ViewModelOnboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AE6ADB2A645E6F00063D52 /* ViewModelOnboarding.swift */; };
-		99AE6ADE2A645E8300063D52 /* ViewsOnboarding3.1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AE6ADD2A645E8300063D52 /* ViewsOnboarding3.1.swift */; };
-		99AE6AE02A645E8E00063D52 /* ViewsOnboarding3.2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AE6ADF2A645E8E00063D52 /* ViewsOnboarding3.2.swift */; };
-		99AE6AE22A645E9B00063D52 /* ViewsOnboarding3.3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AE6AE12A645E9B00063D52 /* ViewsOnboarding3.3.swift */; };
+		99AE6ADE2A645E8300063D52 /* RootOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AE6ADD2A645E8300063D52 /* RootOnboardingView.swift */; };
+		99AE6AE02A645E8E00063D52 /* SecondOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AE6ADF2A645E8E00063D52 /* SecondOnboardingView.swift */; };
+		99AE6AE22A645E9B00063D52 /* ThreeOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AE6AE12A645E9B00063D52 /* ThreeOnboardingView.swift */; };
 		99AE6AE42A645EA700063D52 /* OnboardingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AE6AE32A645EA700063D52 /* OnboardingRouter.swift */; };
-		99AE6AE62A645F1700063D52 /* ViewModelEntrance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AE6AE52A645F1700063D52 /* ViewModelEntrance.swift */; };
-		99AE6AE82A645F2700063D52 /* ViewControllerEntrance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AE6AE72A645F2700063D52 /* ViewControllerEntrance.swift */; };
-		99AE6AEA2A645F3B00063D52 /* EntranceRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AE6AE92A645F3B00063D52 /* EntranceRouter.swift */; };
-		99AE6AEC2A645F8400063D52 /* AuthorizateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AE6AEB2A645F8400063D52 /* AuthorizateViewController.swift */; };
-		99AE6AEE2A64602E00063D52 /* ViewModelAuthorizate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AE6AED2A64602E00063D52 /* ViewModelAuthorizate.swift */; };
+		99AE6AE62A645F1700063D52 /* AuthorizateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AE6AE52A645F1700063D52 /* AuthorizateViewModel.swift */; };
+		99AE6AE82A645F2700063D52 /* AuthorizateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AE6AE72A645F2700063D52 /* AuthorizateViewController.swift */; };
+		99AE6AEA2A645F3B00063D52 /* InputRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AE6AE92A645F3B00063D52 /* InputRouter.swift */; };
+		99AE6AEC2A645F8400063D52 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AE6AEB2A645F8400063D52 /* WebViewController.swift */; };
+		99AE6AEE2A64602E00063D52 /* ViewModelWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AE6AED2A64602E00063D52 /* ViewModelWebView.swift */; };
 		99AE6AF02A64603D00063D52 /* RouterWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AE6AEF2A64603D00063D52 /* RouterWebView.swift */; };
 		99AE6AF52A6462A600063D52 /* Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AE6AF42A6462A600063D52 /* Transition.swift */; };
 		99AE6AF72A6462B800063D52 /* ModalTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AE6AF62A6462B800063D52 /* ModalTransition.swift */; };
@@ -71,6 +80,15 @@
 		458394F42A65BFD4008D2A66 /* ViewModelPublishedFiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelPublishedFiles.swift; sourceTree = "<group>"; };
 		458394F62A65BFDE008D2A66 /* ViewPublishedFiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPublishedFiles.swift; sourceTree = "<group>"; };
 		458394F82A65BFEB008D2A66 /* RouterPublishedFiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterPublishedFiles.swift; sourceTree = "<group>"; };
+		458B4BA42AD1F27900F9F8B4 /* OnboardingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingProtocol.swift; sourceTree = "<group>"; };
+		458B4BAA2AD1F52900F9F8B4 /* AuthorizateProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizateProtocols.swift; sourceTree = "<group>"; };
+		458B4BB42AD2028D00F9F8B4 /* ProfileModuleProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModuleProtocols.swift; sourceTree = "<group>"; };
+		458B4BBA2AD208DC00F9F8B4 /* LastFilesProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastFilesProtocols.swift; sourceTree = "<group>"; };
+		458B4BBF2AD209AB00F9F8B4 /* DescriptionLastFilesProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionLastFilesProtocols.swift; sourceTree = "<group>"; };
+		458B4BC42AD20E7700F9F8B4 /* AllFilesProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllFilesProtocols.swift; sourceTree = "<group>"; };
+		458B4BCA2AD218A500F9F8B4 /* PublishedFilesProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublishedFilesProtocol.swift; sourceTree = "<group>"; };
+		458B4BCC2AD219CE00F9F8B4 /* NoFilesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoFilesView.swift; sourceTree = "<group>"; };
+		458B4BD22AD2C03E00F9F8B4 /* RecentFilesProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentFilesProtocols.swift; sourceTree = "<group>"; };
 		45E753DC2A86646100AFC00C /* DescriptionFolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionFolder.swift; sourceTree = "<group>"; };
 		45E753DE2A866C2000AFC00C /* VMForFolderDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMForFolderDescription.swift; sourceTree = "<group>"; };
 		45EDFBE42A73C62A00DD85A5 /* DescriptionLastFiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionLastFiles.swift; sourceTree = "<group>"; };
@@ -92,17 +110,17 @@
 		99AE6AD32A645E1C00063D52 /* ViewControllerAllFiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAllFiles.swift; sourceTree = "<group>"; };
 		99AE6AD52A645E2700063D52 /* RouterAllFiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterAllFiles.swift; sourceTree = "<group>"; };
 		99AE6AD72A645E3400063D52 /* Cells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cells.swift; sourceTree = "<group>"; };
-		99AE6AD92A645E4200063D52 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		99AE6AD92A645E4200063D52 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		99AE6ADB2A645E6F00063D52 /* ViewModelOnboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelOnboarding.swift; sourceTree = "<group>"; };
-		99AE6ADD2A645E8300063D52 /* ViewsOnboarding3.1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewsOnboarding3.1.swift; sourceTree = "<group>"; };
-		99AE6ADF2A645E8E00063D52 /* ViewsOnboarding3.2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewsOnboarding3.2.swift; sourceTree = "<group>"; };
-		99AE6AE12A645E9B00063D52 /* ViewsOnboarding3.3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewsOnboarding3.3.swift; sourceTree = "<group>"; };
+		99AE6ADD2A645E8300063D52 /* RootOnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootOnboardingView.swift; sourceTree = "<group>"; };
+		99AE6ADF2A645E8E00063D52 /* SecondOnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondOnboardingView.swift; sourceTree = "<group>"; };
+		99AE6AE12A645E9B00063D52 /* ThreeOnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeOnboardingView.swift; sourceTree = "<group>"; };
 		99AE6AE32A645EA700063D52 /* OnboardingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingRouter.swift; sourceTree = "<group>"; };
-		99AE6AE52A645F1700063D52 /* ViewModelEntrance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelEntrance.swift; sourceTree = "<group>"; };
-		99AE6AE72A645F2700063D52 /* ViewControllerEntrance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerEntrance.swift; sourceTree = "<group>"; };
-		99AE6AE92A645F3B00063D52 /* EntranceRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntranceRouter.swift; sourceTree = "<group>"; };
-		99AE6AEB2A645F8400063D52 /* AuthorizateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizateViewController.swift; sourceTree = "<group>"; };
-		99AE6AED2A64602E00063D52 /* ViewModelAuthorizate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelAuthorizate.swift; sourceTree = "<group>"; };
+		99AE6AE52A645F1700063D52 /* AuthorizateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizateViewModel.swift; sourceTree = "<group>"; };
+		99AE6AE72A645F2700063D52 /* AuthorizateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizateViewController.swift; sourceTree = "<group>"; };
+		99AE6AE92A645F3B00063D52 /* InputRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputRouter.swift; sourceTree = "<group>"; };
+		99AE6AEB2A645F8400063D52 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		99AE6AED2A64602E00063D52 /* ViewModelWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelWebView.swift; sourceTree = "<group>"; };
 		99AE6AEF2A64603D00063D52 /* RouterWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterWebView.swift; sourceTree = "<group>"; };
 		99AE6AF42A6462A600063D52 /* Transition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transition.swift; sourceTree = "<group>"; };
 		99AE6AF62A6462B800063D52 /* ModalTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalTransition.swift; sourceTree = "<group>"; };
@@ -146,38 +164,376 @@
 		458394EB2A65AE12008D2A66 /* PublishedFilesNoFiles */ = {
 			isa = PBXGroup;
 			children = (
-				458394EC2A65AEAA008D2A66 /* ViewModelPublishedFilesNoFiles.swift */,
-				458394EE2A65AEB5008D2A66 /* ViewPublishedFilesNoFiles.swift */,
-				458394F02A65AEC0008D2A66 /* RouterPublishedFilesNoFiles.swift */,
+				458B4BC92AD2188100F9F8B4 /* Protocols */,
+				458B4BC62AD2184E00F9F8B4 /* ViewModel */,
+				458B4BC72AD2185D00F9F8B4 /* View */,
+				458B4BC82AD2186400F9F8B4 /* Router */,
 			);
 			path = PublishedFilesNoFiles;
 			sourceTree = "<group>";
 		};
-		458394F22A65B161008D2A66 /* ProfileScreen */ = {
+		458394F22A65B161008D2A66 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				99AE6AC52A645DBF00063D52 /* ViewModelProfile.swift */,
-				99AE6AC72A645DCF00063D52 /* ViewControllerProfile.swift */,
-				99AE6AC92A645DDE00063D52 /* RouterProfile.swift */,
+				458B4BB32AD2024900F9F8B4 /* Protocols */,
+				458B4BB02AD2022F00F9F8B4 /* ViewModel */,
+				458B4BB12AD2023800F9F8B4 /* View */,
+				458B4BB22AD2023F00F9F8B4 /* Router */,
 			);
-			path = ProfileScreen;
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		458394F32A65BFBB008D2A66 /* PublishedFiles */ = {
 			isa = PBXGroup;
 			children = (
-				458394F42A65BFD4008D2A66 /* ViewModelPublishedFiles.swift */,
-				458394F62A65BFDE008D2A66 /* ViewPublishedFiles.swift */,
-				458394F82A65BFEB008D2A66 /* RouterPublishedFiles.swift */,
+				458B4BD12AD2C01400F9F8B4 /* Protocols */,
+				458B4BCE2AD2BFF000F9F8B4 /* ViewModel */,
+				458B4BCF2AD2BFFC00F9F8B4 /* View */,
+				458B4BD02AD2C00200F9F8B4 /* Router */,
 			);
 			path = PublishedFiles;
+			sourceTree = "<group>";
+		};
+		4586F1AC2AD1E4D60024DB73 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		458B4B9B2AD1E61000F9F8B4 /* Resurces */ = {
+			isa = PBXGroup;
+			children = (
+				99AE6AA42A6453F900063D52 /* Assets.xcassets */,
+				99AE6AA92A6453F900063D52 /* Info.plist */,
+			);
+			path = Resurces;
+			sourceTree = "<group>";
+		};
+		458B4B9C2AD1E79A00F9F8B4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				99AE6AD92A645E4200063D52 /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		458B4B9D2AD1F10C00F9F8B4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				99AE6AD12A645E1300063D52 /* ViewModelAllFiles.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		458B4B9E2AD1F11800F9F8B4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				99AE6AD32A645E1C00063D52 /* ViewControllerAllFiles.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		458B4B9F2AD1F11E00F9F8B4 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				99AE6AD52A645E2700063D52 /* RouterAllFiles.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		458B4BA02AD1F1C600F9F8B4 /* OnboardingModule */ = {
+			isa = PBXGroup;
+			children = (
+				458B4BA32AD1F25100F9F8B4 /* Protocols */,
+				458B4BA22AD1F21E00F9F8B4 /* Router */,
+				99AE6AB72A6454FF00063D52 /* View */,
+				458B4BA12AD1F1D300F9F8B4 /* ViewModel */,
+			);
+			path = OnboardingModule;
+			sourceTree = "<group>";
+		};
+		458B4BA12AD1F1D300F9F8B4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				99AE6ADB2A645E6F00063D52 /* ViewModelOnboarding.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		458B4BA22AD1F21E00F9F8B4 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				99AE6AE32A645EA700063D52 /* OnboardingRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		458B4BA32AD1F25100F9F8B4 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				458B4BA42AD1F27900F9F8B4 /* OnboardingProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		458B4BA62AD1F4F200F9F8B4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				99AE6AE52A645F1700063D52 /* AuthorizateViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		458B4BA72AD1F4FD00F9F8B4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				99AE6AE72A645F2700063D52 /* AuthorizateViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		458B4BA82AD1F50400F9F8B4 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				99AE6AE92A645F3B00063D52 /* InputRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		458B4BA92AD1F50D00F9F8B4 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				458B4BAA2AD1F52900F9F8B4 /* AuthorizateProtocols.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		458B4BAC2AD200E900F9F8B4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				99AE6AED2A64602E00063D52 /* ViewModelWebView.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		458B4BAD2AD200F100F9F8B4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				99AE6AEB2A645F8400063D52 /* WebViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		458B4BAE2AD200F800F9F8B4 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				99AE6AEF2A64603D00063D52 /* RouterWebView.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		458B4BAF2AD201B300F9F8B4 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				99AE6AF32A64629300063D52 /* Transition */,
+				99AE6AFF2A64630100063D52 /* Routes */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		458B4BB02AD2022F00F9F8B4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				99AE6AC52A645DBF00063D52 /* ViewModelProfile.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		458B4BB12AD2023800F9F8B4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				99AE6AC72A645DCF00063D52 /* ViewControllerProfile.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		458B4BB22AD2023F00F9F8B4 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				99AE6AC92A645DDE00063D52 /* RouterProfile.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		458B4BB32AD2024900F9F8B4 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				458B4BB42AD2028D00F9F8B4 /* ProfileModuleProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		458B4BB62AD208A200F9F8B4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				99AE6ACB2A645DEF00063D52 /* ViewModelLastFiles.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		458B4BB72AD208AE00F9F8B4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				99AE6ACD2A645DF900063D52 /* ViewControllerLastFiles.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		458B4BB82AD208B400F9F8B4 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				99AE6ACF2A645E0400063D52 /* RouterLastFile.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		458B4BB92AD208C900F9F8B4 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				458B4BBA2AD208DC00F9F8B4 /* LastFilesProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		458B4BBC2AD2094C00F9F8B4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				45EDFBE72A73CA4000DD85A5 /* DescriptionViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		458B4BBD2AD2095300F9F8B4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				45EDFBE42A73C62A00DD85A5 /* DescriptionLastFiles.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		458B4BBE2AD2098B00F9F8B4 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				458B4BBF2AD209AB00F9F8B4 /* DescriptionLastFilesProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		458B4BC12AD209E100F9F8B4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				45E753DE2A866C2000AFC00C /* VMForFolderDescription.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		458B4BC22AD20A0100F9F8B4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				45E753DC2A86646100AFC00C /* DescriptionFolder.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		458B4BC32AD20E4C00F9F8B4 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				458B4BC42AD20E7700F9F8B4 /* AllFilesProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		458B4BC62AD2184E00F9F8B4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				458394EC2A65AEAA008D2A66 /* ViewModelPublishedFilesNoFiles.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		458B4BC72AD2185D00F9F8B4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				458394EE2A65AEB5008D2A66 /* ViewPublishedFilesNoFiles.swift */,
+				458B4BCC2AD219CE00F9F8B4 /* NoFilesView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		458B4BC82AD2186400F9F8B4 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				458394F02A65AEC0008D2A66 /* RouterPublishedFilesNoFiles.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		458B4BC92AD2188100F9F8B4 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				458B4BCA2AD218A500F9F8B4 /* PublishedFilesProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		458B4BCE2AD2BFF000F9F8B4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				458394F42A65BFD4008D2A66 /* ViewModelPublishedFiles.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		458B4BCF2AD2BFFC00F9F8B4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				458394F62A65BFDE008D2A66 /* ViewPublishedFiles.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		458B4BD02AD2C00200F9F8B4 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				458394F82A65BFEB008D2A66 /* RouterPublishedFiles.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		458B4BD12AD2C01400F9F8B4 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				458B4BD22AD2C03E00F9F8B4 /* RecentFilesProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		458B4BD42AD2C77300F9F8B4 /* TabBarItems */ = {
+			isa = PBXGroup;
+			children = (
+				99AE6AC12A645D6D00063D52 /* ProfileModule */,
+				99AE6AC22A645D7500063D52 /* LastFilesModule */,
+				99AE6AC32A645D7C00063D52 /* AllFilesModule */,
+			);
+			path = TabBarItems;
 			sourceTree = "<group>";
 		};
 		45E753E02A866D7500AFC00C /* DescriptionFolder */ = {
 			isa = PBXGroup;
 			children = (
-				45E753DE2A866C2000AFC00C /* VMForFolderDescription.swift */,
-				45E753DC2A86646100AFC00C /* DescriptionFolder.swift */,
+				458B4BC12AD209E100F9F8B4 /* ViewModel */,
+				458B4BC22AD20A0100F9F8B4 /* View */,
 			);
 			path = DescriptionFolder;
 			sourceTree = "<group>";
@@ -185,8 +541,9 @@
 		45EDFBE62A73CA1200DD85A5 /* DescriptionView */ = {
 			isa = PBXGroup;
 			children = (
-				45EDFBE72A73CA4000DD85A5 /* DescriptionViewModel.swift */,
-				45EDFBE42A73C62A00DD85A5 /* DescriptionLastFiles.swift */,
+				458B4BBE2AD2098B00F9F8B4 /* Protocols */,
+				458B4BBC2AD2094C00F9F8B4 /* ViewModel */,
+				458B4BBD2AD2095300F9F8B4 /* View */,
 				45E753E02A866D7500AFC00C /* DescriptionFolder */,
 			);
 			path = DescriptionView;
@@ -195,9 +552,10 @@
 		45EDFBE92A73D1C500DD85A5 /* LastFiles */ = {
 			isa = PBXGroup;
 			children = (
-				99AE6ACB2A645DEF00063D52 /* ViewModelLastFiles.swift */,
-				99AE6ACD2A645DF900063D52 /* ViewControllerLastFiles.swift */,
-				99AE6ACF2A645E0400063D52 /* RouterLastFile.swift */,
+				458B4BB92AD208C900F9F8B4 /* Protocols */,
+				458B4BB62AD208A200F9F8B4 /* ViewModel */,
+				458B4BB72AD208AE00F9F8B4 /* View */,
+				458B4BB82AD208B400F9F8B4 /* Router */,
 			);
 			path = LastFiles;
 			sourceTree = "<group>";
@@ -231,79 +589,59 @@
 		99AE6A9A2A6453F600063D52 /* Skillbox Drive */ = {
 			isa = PBXGroup;
 			children = (
-				99AE6AB02A64549E00063D52 /* Screens */,
-				99AE6AF32A64629300063D52 /* Transition */,
-				99AE6AFF2A64630100063D52 /* Routes */,
+				458B4B9C2AD1E79A00F9F8B4 /* Model */,
+				458B4BA02AD1F1C600F9F8B4 /* OnboardingModule */,
+				99AE6AB22A6454B300063D52 /* AuthorizateModule */,
+				99AE6AB42A6454CF00063D52 /* TableViewCell */,
+				458B4BD42AD2C77300F9F8B4 /* TabBarItems */,
+				99AE6AB52A6454DF00063D52 /* LaunchScreen */,
+				458B4BAF2AD201B300F9F8B4 /* Navigation */,
 				458394E22A652D4A008D2A66 /* Servise */,
 				99AE6B072A64674400063D52 /* Localizable */,
-				99AE6AAF2A64549200063D52 /* Delegates */,
-				99AE6AA42A6453F900063D52 /* Assets.xcassets */,
-				99AE6AA92A6453F900063D52 /* Info.plist */,
+				99AE6AAF2A64549200063D52 /* Application */,
+				458B4B9B2AD1E61000F9F8B4 /* Resurces */,
 			);
 			path = "Skillbox Drive";
 			sourceTree = "<group>";
 		};
-		99AE6AAF2A64549200063D52 /* Delegates */ = {
+		99AE6AAF2A64549200063D52 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				4586F1AC2AD1E4D60024DB73 /* New Group */,
 				99AE6A9B2A6453F600063D52 /* AppDelegate.swift */,
 				99AE6A9D2A6453F700063D52 /* SceneDelegate.swift */,
 			);
-			path = Delegates;
+			path = Application;
 			sourceTree = "<group>";
 		};
-		99AE6AB02A64549E00063D52 /* Screens */ = {
+		99AE6AB22A6454B300063D52 /* AuthorizateModule */ = {
 			isa = PBXGroup;
 			children = (
-				99AE6AB12A6454A900063D52 /* ScreenOnboarding */,
-				99AE6AB22A6454B300063D52 /* ScreenEntrance */,
+				458B4BA92AD1F50D00F9F8B4 /* Protocol */,
+				458B4BA62AD1F4F200F9F8B4 /* ViewModel */,
+				458B4BA72AD1F4FD00F9F8B4 /* View */,
+				458B4BA82AD1F50400F9F8B4 /* Router */,
 				99AE6AB32A6454C500063D52 /* WebView */,
-				99AE6AB42A6454CF00063D52 /* TabBarItems */,
-				99AE6AB52A6454DF00063D52 /* LaunchScreen */,
 			);
-			path = Screens;
-			sourceTree = "<group>";
-		};
-		99AE6AB12A6454A900063D52 /* ScreenOnboarding */ = {
-			isa = PBXGroup;
-			children = (
-				99AE6ADB2A645E6F00063D52 /* ViewModelOnboarding.swift */,
-				99AE6AB72A6454FF00063D52 /* Views */,
-				99AE6AE32A645EA700063D52 /* OnboardingRouter.swift */,
-			);
-			path = ScreenOnboarding;
-			sourceTree = "<group>";
-		};
-		99AE6AB22A6454B300063D52 /* ScreenEntrance */ = {
-			isa = PBXGroup;
-			children = (
-				99AE6AE52A645F1700063D52 /* ViewModelEntrance.swift */,
-				99AE6AE72A645F2700063D52 /* ViewControllerEntrance.swift */,
-				99AE6AE92A645F3B00063D52 /* EntranceRouter.swift */,
-			);
-			path = ScreenEntrance;
+			path = AuthorizateModule;
 			sourceTree = "<group>";
 		};
 		99AE6AB32A6454C500063D52 /* WebView */ = {
 			isa = PBXGroup;
 			children = (
-				99AE6AED2A64602E00063D52 /* ViewModelAuthorizate.swift */,
-				99AE6AEB2A645F8400063D52 /* AuthorizateViewController.swift */,
-				99AE6AEF2A64603D00063D52 /* RouterWebView.swift */,
+				458B4BAC2AD200E900F9F8B4 /* ViewModel */,
+				458B4BAD2AD200F100F9F8B4 /* View */,
+				458B4BAE2AD200F800F9F8B4 /* Router */,
 			);
 			path = WebView;
 			sourceTree = "<group>";
 		};
-		99AE6AB42A6454CF00063D52 /* TabBarItems */ = {
+		99AE6AB42A6454CF00063D52 /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				99AE6AD92A645E4200063D52 /* Models.swift */,
 				99AE6AD72A645E3400063D52 /* Cells.swift */,
-				99AE6AC12A645D6D00063D52 /* ProfileItems */,
-				99AE6AC22A645D7500063D52 /* LastFilesItems */,
-				99AE6AC32A645D7C00063D52 /* AllFilesItems */,
 			);
-			path = TabBarItems;
+			path = TableViewCell;
 			sourceTree = "<group>";
 		};
 		99AE6AB52A6454DF00063D52 /* LaunchScreen */ = {
@@ -314,43 +652,44 @@
 			path = LaunchScreen;
 			sourceTree = "<group>";
 		};
-		99AE6AB72A6454FF00063D52 /* Views */ = {
+		99AE6AB72A6454FF00063D52 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				99AE6ADD2A645E8300063D52 /* ViewsOnboarding3.1.swift */,
-				99AE6ADF2A645E8E00063D52 /* ViewsOnboarding3.2.swift */,
-				99AE6AE12A645E9B00063D52 /* ViewsOnboarding3.3.swift */,
+				99AE6ADD2A645E8300063D52 /* RootOnboardingView.swift */,
+				99AE6ADF2A645E8E00063D52 /* SecondOnboardingView.swift */,
+				99AE6AE12A645E9B00063D52 /* ThreeOnboardingView.swift */,
 			);
-			path = Views;
+			path = View;
 			sourceTree = "<group>";
 		};
-		99AE6AC12A645D6D00063D52 /* ProfileItems */ = {
+		99AE6AC12A645D6D00063D52 /* ProfileModule */ = {
 			isa = PBXGroup;
 			children = (
-				458394F22A65B161008D2A66 /* ProfileScreen */,
+				458394F22A65B161008D2A66 /* Profile */,
 				458394EB2A65AE12008D2A66 /* PublishedFilesNoFiles */,
 				458394F32A65BFBB008D2A66 /* PublishedFiles */,
 			);
-			path = ProfileItems;
+			path = ProfileModule;
 			sourceTree = "<group>";
 		};
-		99AE6AC22A645D7500063D52 /* LastFilesItems */ = {
+		99AE6AC22A645D7500063D52 /* LastFilesModule */ = {
 			isa = PBXGroup;
 			children = (
 				45EDFBE62A73CA1200DD85A5 /* DescriptionView */,
 				45EDFBE92A73D1C500DD85A5 /* LastFiles */,
 			);
-			path = LastFilesItems;
+			path = LastFilesModule;
 			sourceTree = "<group>";
 		};
-		99AE6AC32A645D7C00063D52 /* AllFilesItems */ = {
+		99AE6AC32A645D7C00063D52 /* AllFilesModule */ = {
 			isa = PBXGroup;
 			children = (
-				99AE6AD12A645E1300063D52 /* ViewModelAllFiles.swift */,
-				99AE6AD32A645E1C00063D52 /* ViewControllerAllFiles.swift */,
-				99AE6AD52A645E2700063D52 /* RouterAllFiles.swift */,
+				458B4BC32AD20E4C00F9F8B4 /* Protocols */,
+				458B4B9D2AD1F10C00F9F8B4 /* ViewModel */,
+				458B4B9E2AD1F11800F9F8B4 /* View */,
+				458B4B9F2AD1F11E00F9F8B4 /* Router */,
 			);
-			path = AllFilesItems;
+			path = AllFilesModule;
 			sourceTree = "<group>";
 		};
 		99AE6AF32A64629300063D52 /* Transition */ = {
@@ -518,9 +857,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				99AE6AF72A6462B800063D52 /* ModalTransition.swift in Sources */,
-				99AE6AE22A645E9B00063D52 /* ViewsOnboarding3.3.swift in Sources */,
-				99AE6AEE2A64602E00063D52 /* ViewModelAuthorizate.swift in Sources */,
-				99AE6AE62A645F1700063D52 /* ViewModelEntrance.swift in Sources */,
+				99AE6AE22A645E9B00063D52 /* ThreeOnboardingView.swift in Sources */,
+				99AE6AEE2A64602E00063D52 /* ViewModelWebView.swift in Sources */,
+				99AE6AE62A645F1700063D52 /* AuthorizateViewModel.swift in Sources */,
 				45EDFBE52A73C62A00DD85A5 /* DescriptionLastFiles.swift in Sources */,
 				99AE6B052A64633100063D52 /* ItemsTabBarRouter.swift in Sources */,
 				99AE6AD02A645E0400063D52 /* RouterLastFile.swift in Sources */,
@@ -528,38 +867,47 @@
 				458394E62A652E96008D2A66 /* Servise.swift in Sources */,
 				99AE6AF52A6462A600063D52 /* Transition.swift in Sources */,
 				458394E82A652EA0008D2A66 /* Obserable.swift in Sources */,
+				458B4BA52AD1F27900F9F8B4 /* OnboardingProtocol.swift in Sources */,
 				99AE6ACA2A645DDE00063D52 /* RouterProfile.swift in Sources */,
 				99AE6AFE2A6462EE00063D52 /* AnimatedTransition.swift in Sources */,
 				99AE6AC62A645DBF00063D52 /* ViewModelProfile.swift in Sources */,
 				99AE6AD82A645E3400063D52 /* Cells.swift in Sources */,
 				458394F12A65AEC0008D2A66 /* RouterPublishedFilesNoFiles.swift in Sources */,
 				458394E42A652D8E008D2A66 /* NetWork.swift in Sources */,
-				99AE6AEA2A645F3B00063D52 /* EntranceRouter.swift in Sources */,
+				99AE6AEA2A645F3B00063D52 /* InputRouter.swift in Sources */,
 				45E753DD2A86646100AFC00C /* DescriptionFolder.swift in Sources */,
 				458394F92A65BFEB008D2A66 /* RouterPublishedFiles.swift in Sources */,
 				458394F72A65BFDE008D2A66 /* ViewPublishedFiles.swift in Sources */,
-				99AE6ADE2A645E8300063D52 /* ViewsOnboarding3.1.swift in Sources */,
+				458B4BD32AD2C03E00F9F8B4 /* RecentFilesProtocols.swift in Sources */,
+				458B4BC02AD209AB00F9F8B4 /* DescriptionLastFilesProtocols.swift in Sources */,
+				99AE6ADE2A645E8300063D52 /* RootOnboardingView.swift in Sources */,
 				99AE6AF02A64603D00063D52 /* RouterWebView.swift in Sources */,
 				99AE6AFC2A6462DE00063D52 /* Animated.swift in Sources */,
+				458B4BAB2AD1F52900F9F8B4 /* AuthorizateProtocols.swift in Sources */,
 				99AE6AF92A6462C700063D52 /* EmptyTransition.swift in Sources */,
 				99AE6A9E2A6453F700063D52 /* SceneDelegate.swift in Sources */,
-				99AE6AEC2A645F8400063D52 /* AuthorizateViewController.swift in Sources */,
+				99AE6AEC2A645F8400063D52 /* WebViewController.swift in Sources */,
 				458394F52A65BFD4008D2A66 /* ViewModelPublishedFiles.swift in Sources */,
-				99AE6ADA2A645E4200063D52 /* Models.swift in Sources */,
+				99AE6ADA2A645E4200063D52 /* Model.swift in Sources */,
 				99AE6B032A64631E00063D52 /* DefaultRouter.swift in Sources */,
 				99AE6AD22A645E1300063D52 /* ViewModelAllFiles.swift in Sources */,
 				458394ED2A65AEAA008D2A66 /* ViewModelPublishedFilesNoFiles.swift in Sources */,
 				99AE6AE42A645EA700063D52 /* OnboardingRouter.swift in Sources */,
 				99AE6B012A64630E00063D52 /* RoutersProtocols.swift in Sources */,
-				99AE6AE82A645F2700063D52 /* ViewControllerEntrance.swift in Sources */,
+				99AE6AE82A645F2700063D52 /* AuthorizateViewController.swift in Sources */,
+				458B4BCD2AD219CE00F9F8B4 /* NoFilesView.swift in Sources */,
 				458394EF2A65AEB5008D2A66 /* ViewPublishedFilesNoFiles.swift in Sources */,
 				99AE6ACC2A645DEF00063D52 /* ViewModelLastFiles.swift in Sources */,
-				99AE6AE02A645E8E00063D52 /* ViewsOnboarding3.2.swift in Sources */,
+				99AE6AE02A645E8E00063D52 /* SecondOnboardingView.swift in Sources */,
 				99AE6AD62A645E2700063D52 /* RouterAllFiles.swift in Sources */,
+				458B4BB52AD2028D00F9F8B4 /* ProfileModuleProtocols.swift in Sources */,
 				99AE6AD42A645E1C00063D52 /* ViewControllerAllFiles.swift in Sources */,
 				45EDFBE82A73CA4000DD85A5 /* DescriptionViewModel.swift in Sources */,
+				458B4BC52AD20E7700F9F8B4 /* AllFilesProtocols.swift in Sources */,
 				4537DF742A71938900C54002 /* CellServise.swift in Sources */,
 				99AE6B092A64675A00063D52 /* Extension+String.swift in Sources */,
+				458B4BCB2AD218A500F9F8B4 /* PublishedFilesProtocol.swift in Sources */,
+				458B4BBB2AD208DC00F9F8B4 /* LastFilesProtocols.swift in Sources */,
 				99AE6ADC2A645E6F00063D52 /* ViewModelOnboarding.swift in Sources */,
 				99AE6ACE2A645DF900063D52 /* ViewControllerLastFiles.swift in Sources */,
 				99AE6AC82A645DCF00063D52 /* ViewControllerProfile.swift in Sources */,
@@ -642,7 +990,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -697,7 +1045,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -716,11 +1064,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Skillbox Drive/Info.plist";
+				INFOPLIST_FILE = "Skillbox Drive/Resurces/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -743,11 +1092,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Skillbox Drive/Info.plist";
+				INFOPLIST_FILE = "Skillbox Drive/Resurces/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
